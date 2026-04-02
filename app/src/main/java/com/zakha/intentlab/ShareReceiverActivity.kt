@@ -11,7 +11,6 @@ class ShareReceiverActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_share_receiver)
 
-        // Cek apakah Activity ini dibuka lewat aksi SEND [cite: 236, 237]
         if (intent?.action == Intent.ACTION_SEND && intent.type == "text/plain") {
             val sharedText = intent.getStringExtra(Intent.EXTRA_TEXT)
             val tvShared = findViewById<TextView>(R.id.tvShared)
